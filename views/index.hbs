@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<title>Your Habit Calander</title>
+	<style>
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+		div.container{
+			-webkit-column-count: 54;
+			-moz-column-count: 54;
+			column-count: 54;
+			width:90%;
+			min-width: 65em ;
+			height:8rem
+		}
+    div.square {
+			-webkit-column-break-inside: avoid;
+			          page-break-inside: avoid;
+			               break-inside: avoid;
+      height: 1em;
+      width: 1em;
+			padding:0px;
+			margin: .1em 0;
+    }
+		div.square-false{
+			background-color: #ccc;
+		}
+		div.square-true{
+			background-color: #1DA6C3 ;
+		}
+
+
+  </style>
+</head>
+<body>
+	<h1>Tylers Progress!</h1>
+
+  <div class="container">
+		{{#each dates as |date|}}
+	  <div class="square square-{{date.goal}}">
+	  </div>
+  {{/each}}
+  </div>
+
+	<input type="button" value="I did it today!" onclick="win()" />
+	<input type="button" value="I lied, I didn't do it today!" onclick="fail()" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    function fail () {
+      console.log("o darn")
+    }
+    function win () {
+      console.log("good work")
+			$.ajax('/todayWin', {
+        method: 'post',
+        complete: function () {
+          location = '/'
+        }
+      })
+    }
+
+  </script>
+
+</body>
+</html>

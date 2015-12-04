@@ -4,7 +4,8 @@
   "description": "Jerry Sienfields red X practice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/merryt/habits/issues"
   },
-  "homepage": "https://github.com/merryt/habits#readme"
+  "homepage": "https://github.com/merryt/habits#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "consolidate": "^0.13.1",
+    "express": "^4.13.3",
+    "firebase": "^2.3.2",
+    "handlebars": "^4.0.5",
+    "jade": "^1.11.0",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
 }
