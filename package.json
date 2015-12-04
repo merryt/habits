@@ -1,0 +1,22 @@
+{
+  "name": "habits",
+  "version": "1.0.0",
+  "description": "Jerry Sienfields red X practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merryt/habits.git"
+  },
+  "keywords": [
+    "habits"
+  ],
+  "author": "Tyler Merry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merryt/habits/issues"
+  },
+  "homepage": "https://github.com/merryt/habits#readme"
+}
